@@ -1,0 +1,21 @@
+.button {
+    min-height: 0px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: hsla(0, 0%, 100%, 0);
+    border-radius: 9px;
+    background-color: #d7263d;
+    box-shadow: 1px 1px 8px -3px #000;
+    font-family: 'Manrope', sans-serif;
+    color: #fff;
+    font-size: 19px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.8px;
+    white-space: normal;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+  }
