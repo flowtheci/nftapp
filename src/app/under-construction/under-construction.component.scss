@@ -22,13 +22,7 @@
   min-height: 98vh;
 }
 
-@font-face {
-  font-family: "Akira expanded demo";
-  src: url("src/assets/fonts/akira-expanded.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+
 
 @media screen and (max-width: 1024px) {
   .under-construction-text {
