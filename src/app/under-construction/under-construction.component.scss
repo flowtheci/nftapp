@@ -1,0 +1,40 @@
+.particles {
+  opacity: 0.6;
+}
+
+.under-construction-text {
+  align-self: center;
+  font-family: 'Akira expanded demo';
+  font-size: 4.5vw;
+  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+
+.social-media-buttons {
+  margin-top: 2.8vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-height: 98vh;
+}
+
+@font-face {
+  font-family: "Akira expanded demo";
+  src: url("src/assets/fonts/akira-expanded.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media screen and (max-width: 1024px) {
+  .under-construction-text {
+    font-size: 7.5vw;
+  }
+}
+
+
+
