@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import particles from '../../config/particles.json';
+declare let AOS: any;
 
 @Component({
   selector: 'app-site',
@@ -8,18 +9,36 @@ import particles from '../../config/particles.json';
 })
 export class SiteComponent implements OnInit {
 
-  homeButton: string = 'Home';
-  aboutButton: string = 'About';
-  teamButton: string = 'Team';
-  roadMapButton: string = 'Roadmap';
-  faqButton: string = 'FAQ';
   particles: any = particles;
+  headerOptions: string[] = ['Home', 'About', 'Roadmap', 'Team', 'FAQ'];
+
   // color: 6D84F8
 
 
-  constructor() { }
+  constructor() {
+    console.log(AOS);
+  }
 
   ngOnInit(): void {
+    AOS.init();
+    console.log(AOS);
+  }
+
+  log(item: any) {
+    console.log(item);
+  }
+
+  scrollToElement($element: HTMLElement): void {
+    console.log($element);
+    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
+
+
+  scroll(header: string) {
+    header = header.toLowerCase();
+    const element = document.getElementById(header);
+    console.log(element);
+    element ? this.scrollToElement(element) : null;
   }
 
 

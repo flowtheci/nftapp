@@ -61,6 +61,11 @@ mark {
   background: #ff0;
   color: #000;
 }
+.about-text {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 29px;
+}
 small {
   font-size: 80%;
 }
@@ -76,6 +81,10 @@ sup {
 }
 sub {
   bottom: -0.25em;
+}
+.about-header {
+  text-align: center;
+  margin-bottom: 10px;
 }
 img {
   border: 0;
@@ -609,11 +618,6 @@ textarea.w-select {
 }
 .w-icon-file-upload-icon,
 .w-icon-file-upload-uploading {
-  display: inline-block;
-  margin-right: 8px;
-  width: 20px;
-}
-.w-icon-file-upload-uploading {
   height: 20px;
 }
 .w-container {
@@ -923,10 +927,6 @@ textarea.w-select {
 .w-widget-twitter-count-shim.w--large .w-widget-twitter-count-inner {
   font-size: 18px;
   line-height: 18px;
-}
-.w-widget-twitter-count-shim:not(.w--vertical) {
-  margin-left: 5px;
-  margin-right: 8px;
 }
 .w-widget-twitter-count-shim:not(.w--vertical).w--large {
   margin-left: 6px;
@@ -1448,6 +1448,18 @@ textarea.w-select {
 .w-lightbox-hide {
   display: none;
 }
+.top-margin {
+  margin-top: 1.5vh;
+}
+.button-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  margin-left: -6px;
+  margin-top: -3.2px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
 .w-lightbox-noscroll {
   overflow: hidden;
 }
@@ -1639,10 +1651,8 @@ textarea.w-select {
   vertical-align: top;
   text-decoration: none;
   color: #222;
-  padding: 20px;
+  margin: 30px;
   text-align: left;
-  margin-left: auto;
-  margin-right: auto;
 }
 .w-nav-link.w--current {
   color: #0082f3;
@@ -1874,7 +1884,10 @@ h3 {
   height: 100vh;
   margin-right: auto;
   margin-left: auto;
-  padding: 22vh 3vw 15vh;
+  padding-top: 22vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+
 }
 .nav-link {
   height: 100%;
@@ -1894,8 +1907,6 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   padding-top: 20px;
-  margin-left: 100px;
-  margin-right: 100px;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
@@ -1908,7 +1919,7 @@ h3 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1600px;
+  max-width: 90vw;
   margin-right: auto;
   margin-left: auto;
   -webkit-box-pack: justify;
@@ -1952,6 +1963,25 @@ h3 {
   font-size: 2vh;
   font-weight: 700;
 }
+.underline-hover:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #333333;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.pointer {
+  cursor: pointer;
+}
+.underline-hover:hover:after {
+  width: 100%;
+  left: 0;
+}
 .main-button.thin {
   -webkit-transition: background-color 0.4s ease-in-out;
   transition: background-color 0.4s ease-in-out;
@@ -1973,9 +2003,15 @@ h3 {
 .main-button.wallet:hover {
   background-color: #000;
   color: #fff;
+  .button-icon {
+    -webkit-filter: invert(100%) !important;
+  }
 }
 .div-block {
   padding-left: 4px;
+}
+.extra-padding {
+  margin-left: 18px;
 }
 .image {
   width: 104px;
@@ -2039,8 +2075,9 @@ h3 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 583px;
-  height: 587px;
+  margin-top: 28px;
+  width: 600px;
+  height: 605px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2048,7 +2085,7 @@ h3 {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: flex-start;
   background-image: url("../../assets/grid2.jpg");
   background-position: 50% 50%;
   background-size: cover;
@@ -2089,7 +2126,7 @@ h3 {
   align-items: flex-start;
 }
 .how-section {
-  margin-top: 20vh;
+  margin-top: 5vh;
   margin-bottom: 20vh;
   padding-top: 40px;
   padding-right: 3vw;
@@ -2331,16 +2368,18 @@ h3 {
 .image-4 {
   max-height: 100%;
 }
-.image-5 {
-  display: block;
-  padding-left: 0;
-}
 .section-test {
   display: none;
   margin-right: 40px;
   margin-left: 40px;
   -o-object-fit: fill;
   object-fit: fill;
+}
+.image-5 {
+  height: 100%;
+  display: block;
+  margin: auto;
+  max-width: 100%;
 }
 .image-6 {
   display: block;

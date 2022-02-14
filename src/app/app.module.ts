@@ -11,6 +11,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { SiteComponent } from './site/site.component';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
 import { NgParticlesModule } from 'ng-particles';
+import { RoadmapComponent } from './roadmap/roadmap.component';
+import { TimelineModule } from "primeng/timeline";
+import {Card, CardModule} from "primeng/card";
 
 
 @NgModule({
@@ -20,6 +23,7 @@ import { NgParticlesModule } from 'ng-particles';
     ViewComponent,
     SiteComponent,
     UnderConstructionComponent,
+    RoadmapComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,8 @@ import { NgParticlesModule } from 'ng-particles';
     MatIconModule,
     NgParticlesModule,
     MatButtonModule,
+    TimelineModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
