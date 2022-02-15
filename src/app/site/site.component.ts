@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import particles from '../../config/particles.json';
-declare let AOS: any;
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-site',
@@ -16,12 +16,10 @@ export class SiteComponent implements OnInit {
 
 
   constructor() {
-    console.log(AOS);
   }
 
   ngOnInit(): void {
     AOS.init();
-    console.log(AOS);
   }
 
   log(item: any) {
